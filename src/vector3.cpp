@@ -1,4 +1,5 @@
 #include "vector3.h"
+#include <cmath> // std::sqrt
 
 // Overload the subtraction operator
 Vector3 Vector3::operator-(const Vector3 &v) const
@@ -28,13 +29,7 @@ double Vector3::dot(const Vector3 &v) const
 }
 
 // Length (magnitude) of the vector
-float Vector3::length() const
+double Vector3::length() const
 {
     return std::sqrt(x * x + y * y + z * z);
-}
-
-// Print the vector
-void Vector3::print() const
-{
-    std::cout << "(" << x << ", " << y << ", " << z << ")";
 }

@@ -2,17 +2,20 @@
 #include "utils.h"
 #include "vector3.h"
 
-/* 
- * Implemenatation of the following paper
+/**
+ * @brief Determines if two triangles in 3D space intersect.
  *
+ * This function takes the coordinates of two triangles in 3D space and determines whether they intersect.
+ * Each triangle is represented by an array of 9 doubles, corresponding to the coordinates of its 3 vertices
+ * (x1, y1, z1, x2, y2, z2, x3, y3, z3).
  *
- * TY  - JOUR
- * AU  - Eberly, David
- * PY  - 2001/05/25
- * SP  - 
- * T1  - Dynamic Collision Detection using Oriented Bounding Boxes
- * VL  - 
- * ER  - 
+ * @param t1 Array of 9 doubles representing the first triangle.
+ * @param t2 Array of 9 doubles representing the second triangle.
+ * @return true if the triangles intersect, false otherwise.
+ *
+ * @note The algorithm implemented in this function is based on the work of David Eberly.
+ *
+ * @see Eberly, David. "Dynamic Collision Detection using Oriented Bounding Boxes", 2001/05/25.
  */
 bool doTrianglesIntersect(double t1[9], double t2[9])
 {

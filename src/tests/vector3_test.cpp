@@ -9,9 +9,9 @@ void testVector3Subtraction()
     Vector3 v2 = {1.0f, 0.0f, 1.0f};
     Vector3 result = v1 - v2;
 
-    assert(result.x == 2.0f);
-    assert(result.y == 2.0f);
-    assert(result.z == 0.0f);
+    assert(result._x() == 2.0f);
+    assert(result._y() == 2.0f);
+    assert(result._z() == 0.0f);
 }
 
 void testVector3Addition()
@@ -20,9 +20,9 @@ void testVector3Addition()
     Vector3 v2 = {1.0f, 0.0f, 1.0f};
     Vector3 result = v1 + v2;
 
-    assert(result.x == 4.0f);
-    assert(result.y == 2.0f);
-    assert(result.z == 2.0f);
+    assert(result._x() == 4.0f);
+    assert(result._y() == 2.0f);
+    assert(result._z() == 2.0f);
 }
 
 void testVector3CrossProduct()
@@ -31,9 +31,9 @@ void testVector3CrossProduct()
     Vector3 v2 = {0.0f, 1.0f, 0.0f};
     Vector3 result = v1.cross(v2);
 
-    assert(result.x == 0.0f);
-    assert(result.y == 0.0f);
-    assert(result.z == 1.0f);
+    assert(result._x() == 0.0f);
+    assert(result._y() == 0.0f);
+    assert(result._z() == 1.0f);
 }
 
 void testVector3DotProduct()
@@ -75,17 +75,17 @@ void testTriangleCalculations()
 
     Vector3 D = B0 - A0;
 
-    assert(E0.x == -1.0f && E0.y == 1.0f && E0.z == 0.0f);
-    assert(E1.x == -1.0f && E1.y == 0.0f && E1.z == 1.0f);
-    assert(E2.x == 0.0f && E2.y == -1.0f && E2.z == 1.0f);
-    assert(N.x == 1.0f && N.y == 1.0f && N.z == 1.0f);
+    assert(E0._x() == -1.0f && E0._y() == 1.0f && E0._z() == 0.0f);
+    assert(E1._x() == -1.0f && E1._y() == 0.0f && E1._z() == 1.0f);
+    assert(E2._x() == 0.0f && E2._y() == -1.0f && E2._z() == 1.0f);
+    assert(N._x() == 1.0f && N._y() == 1.0f && N._z() == 1.0f);
 
-    assert(F0.x == -1.0f && F0.y == 0.0f && F0.z == 1.0f);
-    assert(F1.x == 0.0f && F1.y == -1.0f && F1.z == 1.0f);
-    assert(F2.x == 1.0f && F2.y == -1.0f && F2.z == 0.0f);
-    assert(M.x == 1.0f && M.y == 1.0f && M.z == 1.0f);
+    assert(F0._x() == -1.0f && F0._y() == 0.0f && F0._z() == 1.0f);
+    assert(F1._x() == 0.0f && F1._y() == -1.0f && F1._z() == 1.0f);
+    assert(F2._x() == 1.0f && F2._y() == -1.0f && F2._z() == 0.0f);
+    assert(M._x() == 1.0f && M._y() == 1.0f && M._z() == 1.0f);
 
-    assert(D.x == 0.0f && D.y == 1.0f && D.z == 0.0f);
+    assert(D._x() == 0.0f && D._y() == 1.0f && D._z() == 0.0f);
 }
 
 int main()

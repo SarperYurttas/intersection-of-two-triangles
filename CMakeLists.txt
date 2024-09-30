@@ -4,6 +4,9 @@ project(two_triangles)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
+# Enable all warnings
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall")
+
 # Add the source files
 set(SRCS
     ${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp
